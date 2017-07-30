@@ -1,0 +1,8 @@
+- Variáveis que podem armazenar múltiplos valores
+    criacao - testearray=(valor1 valor 2 valor3)
+    utilização - ${testearray[1]} - inicia com indice zero. No exemplo irá mostrar o 2 valor
+                 ${testearray[*]} - mostra todos os valores do array. Deve-se utilizar 'echo' para mostrar todos os valores
+                 $testearray - mostra o primeiro indice do array
+                 unset testearray[2] - remove o indice especificado do array
+                 unset testearray[*] - remove todos os indices do array
+                 testearray[3] - adiciona um valor no array

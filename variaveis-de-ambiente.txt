@@ -1,0 +1,12 @@
+contém valores, variáveis que são utilizadas por outros programas
+existem 2 tipos de variáveis:
+    globais: podem ser passadas por vários programas, subprocessos do sistema operacional;
+    locais: criadas localmente, podendo ser exportadas para utilização no sistema em geral.
+
+
+$SECONDS - mostra os segundos de acesso ao shell
+bash - abre um novo bash
+ps - mostra os processos
+teste='valor' - cria uma variável chamada teste
+export 'nome da variável' - exporta a variável para utilização nas variáveis de ambiente.
+unset 'nome da variável' - remove a variável das variáveis de ambiente

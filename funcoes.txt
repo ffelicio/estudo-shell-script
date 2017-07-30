@@ -1,0 +1,17 @@
+O bash também permite trabalhar com funções, que são parecidas com os aliases,
+mas ao invés de comandos, temos pequenos programas.
+Se ficar na mesma linha, separar os comandos por ponto e vírgula
+
+Sintaxe
+    nome_funcao() {
+        comandos
+    }
+
+    Exemplo
+        palavra() {
+            cd /home/usuario
+            echo 'linha acrescentada' >> teste_func
+        }
+
+Listagem das funções
+    typeset -f - mostra as funções que foram criadas no bash

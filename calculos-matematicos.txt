@@ -1,0 +1,53 @@
+É possível realizar cálculos matemáticos diretamente no bash e atribuir o resultado de uma
+operação a uma variável.
+Para isso, englobe a equação usando um cifrão e colchetes
+variável=$[operação]
+
+Exemplo:
+    var1=$[2 + 6]
+    echo $var1
+    var2=$[$var1 * 2]
+    echo $var2
+
+Problemas
+    Há um problema em realizar cálculos com o shell bash: seus operadores matemáticos só suportam
+    aritmética de números inteiros.
+    Exemplo:
+        var1=9
+        var2=2
+        var3=$[$var1 / $var2]
+        echo "Resultado: $var3"
+
+    O resultado deveria ser 4.5, mas o shell retornou 4
+
+Usando a calculadora do Bash -bc
+
+A calculadora do bash é na verdade uma linguagem de programação que permite executar expressões
+de ponto flutuante no terminal.
+Ela reconhece
+    N° inteiros e FP
+    Variáveis simples e arrays
+    Comentários estilo "C" (/* */)
+    Expressões
+    Declarações condicionais if then
+    Funções
+
+Para acessar digite: bc ou bc -q(nesse último entra sem a informação de boas vindas)
+Para sair digite: quit
+
+Aritmética de ponto flutuante
+
+É controlada pela variável especial 'scale'. Você configura seu valor para o número desejado
+de casas decimais que necessita nos resultados.
+Por padrão, a variável 'scale' vem definida com valor zero(0)
+Exemplo:
+    scale=2 (número de casas decimais)
+    9 / 2 = 4.50
+
+Usando a calculadora bc em scripts
+
+Para usar a 'bc' em um script, use a crase(backtick `), para rodar ocomando e atribuir seu valor a uma variável.
+variável=`echo "variavéis; expressão" | bc`
+Exemplo - Digite os comandos a seguir no terminal:
+    var1=`echo "scale=2; 2 / 5" | bc`
+    echo "Resultado: $var1"

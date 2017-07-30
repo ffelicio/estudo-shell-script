@@ -1,0 +1,12 @@
+Você pode criar suas próprias variáveis dentro de um script.
+Variáveis de usuário podem conter até 20 caracteres no nome e são case-sensitive.
+O shell determina automaticamente o tipo das variáveis criadas.
+As variáveis criadas pelo usuário são desalocadas quando termina a execução do script.
+
+Redirecionar saída de comandos a variáveis
+Usando crases (backtick `)
+    As crases permitem atribuir a saída de um comando do shell a uma variável.
+    O comando todo deve estar entre as crases:
+
+    dia=`date` - guarda na variável a data atual
+    echo "A data é $dia"

@@ -1,0 +1,34 @@
+REDIRECIONAMENTO DE ENTRADA E SAÍDA
+
+Redirecionamento de Saída
+    O mais comum é enviar a saída de um comando paara um arquivo.
+    Para isso, use o símbolo: >
+    comando > arquivo_saida
+    ls > arquivo.txt
+
+    Caso queira acrescentar a saída de um comando a um arquivo ao invés de sobreescrevê-lo,
+    use o símbolo duplo: >>
+    comando >> arquivo_saida
+    date >> arquivo.txt
+
+Redirecionamento de entrada
+    Ao invés de redirecionar a saída de um comando para um arquivo, é possível tomar o conteúdo de um
+    arquivo e redirecioná-lo para um comando.
+    Para isso, use o símbolo: <
+    comando < arquivo_entrada
+    wc < arquivo.txt
+
+    O comando wc produz a contagem de texto do arquivo. Por padrão mostra 3 valores:
+    - N° de linhas no texto;
+    - N° de palavras
+    - N° de bytes
+
+Redirecionamento de entrada inline
+    Com este comando é possíevl especificar os dados para redirecionamento na linha de comando ao invés
+    de um arquivo.
+    O símbolo de redirecionamento de entrada inline é o <<. Você também deve especificar um marcador de
+    texto que delineie o início e o fim dos dados usados para entrada:
+        wc << EOF #marcador(pode ser qualquer palavra)
+     #prompt secundário(PS2) >linha de texto 
+     #prompt secundário(PS2) >linha de texto 
+              EOF #marcador(pode ser qualquer palavra)

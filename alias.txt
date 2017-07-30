@@ -1,0 +1,8 @@
+Serve para criar um comando ou sequência mais usados frequentemente
+Criação
+    alias mo='more'
+    alias lshome='cd home; ls'
+
+Remoção
+    unalias
+        unalias mo - remove o alias

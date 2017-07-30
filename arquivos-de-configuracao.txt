@@ -1,0 +1,22 @@
+Shell Interativo
+    Quando o bash é iniciado como um Shell Interativo, ele não processa o arquivo /etc/profile.
+    Ao invés disso, ele tenta executar o arquivo .bashrc no diretório do usuário atual.
+    O arquivo .bashrc pode ser usado para que o usuário insira aliases personalizados e funções de scripts pessoais.
+    Também executa o arquivo global - /etc/bashrc ou /etc/bash.bashrc, o qual configura algumas variáveis de ambiente locais.
+
+Shell Não Interativo
+    É o Shell iniciado para executar um script(shell script).
+    Quando um shell é iniciado em modo não Interativo, ele verifica a variável de ambiente BASH_ENV para descobrir se há comandos de
+    inicialização e executar.
+    Por padrão, o valor desta variável não é configurado.
+
+Shell de login
+    /etc/profile
+    ~/.bash_profile
+    ~/.bash_login
+    ~/.profile
+
+RESUMO
+    Quando você loga no sistema Linux, o shell bash acessa o arquivo de inicialização /etc/profile e também os arquivos de inicialização
+    locais do seu usuário, presentes no diretório home: ~/.bash_login, ~/.profile e ~/.bash_profile.
+    Esses arquivos locais são todos opcionais e podem ser personalizados pelo usuário para incluir variáveis de ambiente e scripts de inicialização.
