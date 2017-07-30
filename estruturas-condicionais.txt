@@ -1,0 +1,35 @@
+COMANDOS ESTRUTURADOS
+
+Sintaxe
+
+Nesse tipo é testado o status de saída do comando executado. Se for 0(zero) é verdadeiro
+if comando
+then
+    comandos
+fi
+
+ou
+
+if comandos; then
+    comandos
+fi
+
+CONDICIONAL if ANINHADO
+
+Às vezes é necessário verificar várias situações relacionadas em seu script.
+Ao invés de ter de escrever declarações if-then separadas, você pode usar uma versão alternativa da seção 'else', chamada 'elif'.
+O 'elif' continua uma seção 'else' com outra declaração if-then.
+O shell bash executará as declarações 'if' em ordem, e apenas a primeira que retornar status de saída 0(zero), terá a seção then correspondente executada.
+Exemplo:
+    if comando1
+    then
+        comandos
+    elif comando2
+    then
+        comandos2
+    elif comando3
+    then
+        comandos3
+    else
+        comandos-else
+    fi

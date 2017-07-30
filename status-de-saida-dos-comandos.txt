@@ -1,0 +1,24 @@
+STATUS DE SAÍDA DOS COMANDOS
+
+Cada comando que roda no shell usa um valor de status de saída. Serve para indicar ao shell que o
+processamento terminou
+O status de saída é um inteiro entre 0 e 255
+
+A variável especial '$?' armazena o valor do status de saída do último comando executado
+
+O status de saída de um comando executado com sucesso é 0(zero).Se houver erro, será um inteiro positivo.
+
+SIGNIFICADO
+
+| Código | Significado                                   |
+|  0     | Comando completado com sucesso                |
+|  1     | Erro geral desconhecido                       |
+| 126    | O comando não pode ser executado (permissões) |
+| 127    | Comando não encontrado                        |
+| 130    | Comando finalizado com CTRL + C               |
+
+COMANDO EXIT
+
+Por padarão, seu shell script finaliza com o status de sáda do último comando executado no script.
+É possível alterar esse comportamento para retornar seu próprio código de status.
+O comando 'exit' permite especificar um status de saída quando o script finaliza.
