@@ -33,3 +33,58 @@ Exemplo:
     else
         comandos-else
     fi
+
+O COMANDO TEST
+
+A declaração 'if-then' não consegue avaliar nenhuma condição que não seja o código de status de saída de um comando.
+Porém, é possível avaliar outras condições usando o comando 'test' em uma declaração 'if-then'.
+O comando 'test' avalia uma condição, e se ela retornar 'true (V)', o comando 'test' retorna código de status igual
+a 0 (zero); caso contrário, retorna status de saída igual a 1 (um).
+Exemplo:
+
+if test condicao
+then
+    comandos
+fi
+
+O shell bash fornece uma maneira alternativa de declarar o comando 'test' com o if-then:
+if [ condição ]
+then
+    comandos
+fi
+
+Os colchetes definem a condição usada pelo 'test'; deve haver espaços antes e depois da condição.
+
+O comando 'test' pode avaliar três classes de condições:
+    - Comparações numéricas
+    - Comparações de strings
+    - Comparações de arquivos
+
+Tabela
+
+Comparação | Descrição
+n1 -eq n2  | Verifica se n1 é igual a n2
+n1 -ge n2  | Verifica se n1 é maior ou igual a n2
+n1 -gt n2  | Verifica se n1 é maior que n2
+n1 -le n2  | Verifica se n1 é menor ou igual a n2
+n1 -lt n2  | Verifica se n1 é menor que n2
+n1 -ne n2  | Verifica se n1 é diferente de n2
+----------------------------------------------------------
+Avaliam tanto númeors quanto variáveis
+O comando 'test' não suporta aritmética de ponto flutuante
+----------------------------------------------------------
+
+Comparações de strings
+
+O comando 'test' também permite realizar comparações entre valores de strings.
+Vejamos na tabela a seguir os operadores de comparação e seus significados.
+
+Tabela
+
+Comparação   | Descrição
+str1 = str2  | Verifica se str1 é idêntica a str2
+str1 != str2 | Verifica se str1 é diferente de str2
+str1 < str2  | Verifica se str1 é "menor" que str2
+str1 > str2  | Verifica se str1 é "maior" que str2
+-n str1      | Verifica se str1 tem comprimento maior que zero
+-z str1      | Verifica se str1 tem comprimento zero
