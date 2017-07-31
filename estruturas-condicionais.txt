@@ -108,3 +108,13 @@ Comparação
 -G arquivo            | Verifica se o arquivo existe e seu grupo padrão é o mesmo do usuário atual
 arquivo1 -nt arquivo2 | Verifica se o arquivo se 'arquivo1' é mais novo que 'arquivo2'
 arquivo1 -ot arquivo2 | Verifica se o arquivo se 'arquivo1' é mais antigo que 'arquivo2'
+
+TESTE DE CONDIÇÕES COMPOSTAS
+
+A declaração 'if-then' permite usar lógica booleana para combinar testes.
+Podemos usar dois operandos booleanos:
+# AND
+[ condição ] && [ condicao2 ]
+
+#OR
+[ condição ] || [ condicao2 ]
