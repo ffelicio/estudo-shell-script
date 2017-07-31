@@ -1,0 +1,18 @@
+COMANDO CASE
+
+Esse comando verifica condições múltiplas que podem ocorrer em uma variável, em um formato parecido com uma lista.
+A estrutura 'case' substitui e simplifica o uso do 'if-then-elif' com várias declarações
+O comando 'case' compara o valor de uma variável ou expressão com os valores da lista criada.
+Se os valores 'baterem', o shell executará os comandos especificados para o valor.
+
+Sintaxe
+    case <variável> in
+        valor1)
+            comandos 1;;
+        valor2
+            comandos 2;;
+        valor3 | valor4)
+            comandos 3 e 4;;
+        *)
+            comandos-padrão;;
+    esac
