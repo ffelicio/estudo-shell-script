@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-nome="Fernando"
+nome="Teste"
 echo "Teste de mesclagem de variável local e global"
 echo "-------------------------------------"
 echo "|                                   |"

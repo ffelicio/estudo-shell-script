@@ -3,5 +3,5 @@
 # Criando variáveis
 
 idade=32
-nome="Jordana"
-echo "A $nome tem $idade anos de idade."
+nome="João"
+echo "O $nome tem $idade anos de idade."
