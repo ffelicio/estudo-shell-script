@@ -1,0 +1,34 @@
+ESTRUTURAS DE REPETIÇÃO
+
+O Shell Bash oferece três estruturas de repetição para criação de 'loops' estruturados.
+Segue abaixo:
+    - for
+    - while
+    - until
+
+FOR
+    Permite criar um 'loop' que itera através de uma série de valores.
+    Cada iteração executa um conjunto definido de comandos usando um dos valores da lista
+    Exemplo:
+        for valor in lista
+        do
+            comandos
+        done
+
+    A cada iteração, a variável 'valor' contém o valor atual da lista.
+
+WHILE
+
+
+
+UNTIL
+
+
+SEPARADOR DE CAMPOS: IFS
+
+Caso os itens iterados sejam compostos por palavras separadas por espaços (como Testando repetição), o comando 'for'
+irá considerar cada palavra como um item separado.
+Isso é devido a variável de ambiente 'IFS (Internal Field Separator)', a qual define uma lista de caracteres que o shell Bash
+usa como separadores de campos.
+São eles, por padrão: espaço, tabulação e newline.
+É possível alterar essa lista de separadores.
